@@ -1,0 +1,177 @@
+:root {
+  --font-body: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-headline: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* colors */
+  --primary-color: #FF6F00;
+  --secondary-color: #525b0f;
+  --tertiary-color: #723805;
+  --light-grey: #d0d0d0;
+  --dark-grey: #2f2e2e;
+
+  /* sizes */
+  --font-base: 18px;
+  --small-font: 0.8em;
+  --large-font: 1.2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-base);
+  background-color: #0A2342;
+  color: white;
+}
+
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #00B8A9;
+  margin-bottom: 20px;
+}
+
+.search {
+  width: 50%;
+}
+
+#search {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #00B8A9;
+  border-radius: 5px;
+}
+
+.cart {
+  position: relative;
+  margin-right: 10px;
+}
+
+#totalItemsInCart {
+  position: absolute;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.2em 0.5em;
+  border-radius: 50%;
+  font-size: 0.8em;
+  margin-top: 0.8rem;
+  margin-left: -12px;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logoContainer {
+  display: flex;
+}
+
+.logo-text {
+  font-family: var(--font-headline);
+  font-size: var(--large-font);
+  color: white;
+  text-decoration: none;
+  display: none;
+}
+
+#movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  list-style: none;
+}
+
+.movie-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#sort {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #00B8A9;
+  border-radius: 5px;
+}
+
+#movieDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+#movieInfo p {
+  margin: 20px 0;
+}
+
+#moviePoster {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#addToFavourites {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+#reviewsContainer {
+  margin-top: 20px;
+}
+
+.review-item {
+  border: 1px solid #00B8A9;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.reviewDate {
+  font-size: .8rem;
+  margin-top: 0 !important;
+}
+
+#movieTitle {
+  padding-left: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#showMoreButton {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+  display: inline;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 908px) {
+  .logo-text {
+    display: block;
+  }
+
+  #movieDetails {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
