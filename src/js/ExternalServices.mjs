@@ -1,5 +1,5 @@
-const baseURL = import.meta.env.TMDb_URL;
-const apiKey = import.meta.env.TMDb_KEY;
+const baseURL = import.meta.env.VITE_TMDB_URL;
+const apiKey = import.meta.env.VITE_TMDB_KEY;
 
 const convertToJson = async (res) => {
   const body = await res.json();
